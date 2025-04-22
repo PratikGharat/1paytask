@@ -42,6 +42,7 @@ GROUP BY
     m.merchant_id, DATE(t.txn_timestamp)
 HAVING 
     COUNT(*) > 10;
+    
 ![image](https://github.com/user-attachments/assets/a3133f76-ec79-4376-a97a-193239008d9c)
 
 
