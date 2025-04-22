@@ -25,6 +25,7 @@ LIMIT 5;
 ![Screenshot 2025-04-22 164050](https://github.com/user-attachments/assets/8b8bcc13-a20c-4353-a1c5-64b9d59dba0a)
 
 Q2. Find merchants who had more than 10 failed transactions in a single day.
+
 SELECT 
     m.merchant_id,
     m.merchant_name,
