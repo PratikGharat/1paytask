@@ -26,14 +26,24 @@ LIMIT 5;
 
 Q2. Find merchants who had more than 10 failed transactions in a single day.
 
-SELECT m.merchant_id, m.merchant_name, DATE(t.txn_timestamp) AS txn_date, COUNT(*) AS failed_txns
-FROM transactions t
-JOIN merchants m ON t.merchant_id = m.merchant_id
-WHERE status = 'FAILED'
-AND DATE(txn_timestamp) = DATE(t.txn_timestamp)
-HAVING failed_txns > 10;
+SELECT 
+    m.merchant_id, 
+    m.merchant_name, 
+    DATE(t.txn_timestamp) AS txn_date, 
+    COUNT(*) AS failed_txns
+FROM 
+    transactions t
+JOIN 
+    merchants m ON t.merchant_id = m.merchant_id
+WHERE 
+    t.status = 'FAILED'
+    AND DATE(txn_timestamp) = DATE(t.txn_timestamp)
+GROUP BY 
+    m.merchant_id, DATE(t.txn_timestamp)
+HAVING 
+    COUNT(*) > 10;
+![image](https://github.com/user-attachments/assets/a3133f76-ec79-4376-a97a-193239008d9c)
 
-![image](https://github.com/user-attachments/assets/50a0492b-f851-4494-9b2f-e14a02b1b109)
 
 
 
