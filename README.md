@@ -1,8 +1,20 @@
 # 1paytask
 
+1. Clone the Repository
+   
+2.Install Dependencies(pip install flask,streamlit,pandas.etc)
 
+3.Run to utils for data summary(run command python utils.py)
+
+4.Run the Flask API(python app.py)
+API Endpoints
+GET /summary?merchant_id=...&date=...
+GET /failures?reseller_id=..
+
+5.Run the Streamlit Dashboard(streamlit run app.py)
 
 #uploaded sql.py to show how to connect to local database through python 
+
 # Part 4 – SQL Challenge 
 Q1. List Top 5 Merchants by Transaction Amount in the ‘North’ Region
 
