@@ -1,7 +1,7 @@
 # 1paytask
 
 1. Clone the Repository
-   
+  
 2.Install Dependencies(pip install flask,streamlit,pandas.etc)
 
 3.Run to utils for data summary(run command python utils.py)
