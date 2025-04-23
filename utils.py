@@ -3,7 +3,7 @@ import pandas as pd
 #load data
 df =  pd.read_csv("transactions_dirty.csv")
 
-df = df.dropna(subset=['transaction_id', 'txn_timestamp', 'txn_amount' ,'status'])# droping missing values 
+df = df.dropna(subset=['transaction_id','txn_amount' ,'status'])# droping missing values 
 
 df['txn_timestamp'] = pd.to_datetime(df['txn_timestamp'], errors='coerce')#convert date and time 
 df = df.dropna(subset=['txn_timestamp'])  # Drop invalid dates
