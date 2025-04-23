@@ -14,6 +14,7 @@ GET /failures?reseller_id=..
 5.Run the Streamlit Dashboard(streamlit run app.py)
 
 #uploaded sql.py to show how to connect to local database through python 
+#for data(csv file) go to the data folder
 
 # Part 4 – SQL Challenge 
 Q1. List Top 5 Merchants by Transaction Amount in the ‘North’ Region
